@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False" 
+             x:Class="ultraTrader.Views.RegisterPage">
+    <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  >
+
+            <StackLayout Padding="30,30">
+
+                <Image Source="ut_logo.png"  Margin="0,30,0,10"  />
+                
+                <Label Text="Criando uma conta gratuita" Style="{StaticResource labelTitle}" HorizontalTextAlignment="Center"></Label>
+                <Label Text="Nome" Style="{StaticResource prompt}" />
+                <Entry x:Name="txtNome" Placeholder="Nome"></Entry>
+                <Label Text="E-mail" Style="{StaticResource prompt}" />
+                <Entry x:Name="txtEmail" Placeholder="Informe seu email" ReturnType="Next" Keyboard="Email" MaxLength="100"></Entry>
+                <Label Text="Senha" Style="{StaticResource prompt}" />
+                <Entry x:Name="txtSenha" Placeholder="Senha" MaxLength="10" ReturnType="Next" IsPassword="True" IsTextPredictionEnabled="False"></Entry>
+                <Label Text="Confirmação da senha" Style="{StaticResource prompt}" />
+                <Entry x:Name="txtSenhaConfirmacao" Placeholder="Confirme a senha" ReturnType="Next" IsPassword="True" IsTextPredictionEnabled="False"></Entry>
+
+                <Button x:Name="btnRegistrar" Text="Criar conta" Clicked="btnRegistrar_Clicked"  Margin="0,0,0,0"/>
+                <Button x:Name="btnVoltar"   Text="Voltar" Clicked="OnBtnVoltarClicked" Margin="0,0,0,5"/>
+
+            </StackLayout>
+            <StackLayout IsVisible="{Binding IsBusy}" Style="{StaticResource loadingLayout}" >
+                <ActivityIndicator IsRunning="{Binding IsBusy}" Style="{StaticResource loading}" />
+            </StackLayout>
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

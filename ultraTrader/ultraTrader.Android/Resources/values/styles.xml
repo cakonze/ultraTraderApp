@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources  xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="MainTheme.Splash" parent="MainTheme.Base">
+      <item name="android:windowBackground">@drawable/splash_screen</item>
+      <item name="android:windowTranslucentStatus" tools:ignore="NewApi">true</item>
+      <item name="android:windowNoTitle">true</item>"
+      <item name="android:windowFullscreen"> false </item>
+      <item name="colorPrimaryDark">#000000</item>
+    </style>
+  
+  
+  <style name="MainTheme" parent="MainTheme.Base">
+  </style>
+  <!-- Base theme applied no matter what API -->
+  
+  <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">  
+    <item name="windowActionModeOverlay">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+    <item name="colorAccent">#a00000</item>
+    <item name="colorControlActivated">#a00000</item>"
+  </style>
+
+  <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorAccent">#590000</item>
+  </style>
+</resources>

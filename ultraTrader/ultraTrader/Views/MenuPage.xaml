@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ultraTrader.Models"
+             xmlns:views="clr-namespace:ultraTrader.Views"
+             Icon="menu.png"
+             Title="UltraTrader"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="ultraTrader.Views.MenuPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout BackgroundColor="#A00000" Padding="10" HeightRequest="100"  >
+                <Label x:Name="lblNomeUsuario" FontSize="Large" TextColor="White" FontAttributes="Bold" Margin="10,0,0,0" VerticalOptions="EndAndExpand"/>
+                <Label x:Name="lblEmailUsuario" FontSize="Small" TextColor="White" Margin="10,-45,0,0" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+            <StackLayout Margin="10,10,0,0"  >
+ 
+                <Grid RowSpacing="25" x:Name="gridMenu" > 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.Column="0" Source="plano.png" />
+                    <Label Grid.Row="0" Grid.Column="1" x:Name="lblMeuPlano" Text="Meu plano" Style="{DynamicResource itemMenu}" />
+
+                    <Image Grid.Row="1" Grid.Column="0" Source="recomendacoes.png" />
+                    <Label Grid.Row="1" Grid.Column="1" x:Name="lblRecomendacoes" Text="Recomendações" Style="{DynamicResource itemMenu}"/>
+
+                    <Image Grid.Row="2" Grid.Column="0" Source="carteira.png" />
+                    <Label Grid.Row="2" Grid.Column="1" x:Name="lblCarteira" Text="Carteira da Semana" Style="{DynamicResource itemMenu}"/>
+
+                    <Image Grid.Row="3" Grid.Column="0" Source="performance.png" />
+                    <Label Grid.Row="3" Grid.Column="1" x:Name="lblPerformance" Text="Performance" Style="{DynamicResource itemMenu}"/>
+
+                    <Image Grid.Row="4" Grid.Column="0" Source="chat.png" />
+                    <Label Grid.Row="4" Grid.Column="1" x:Name="lblChat" Text="Chat" Style="{DynamicResource itemMenu}"/>
+
+                    <Image Grid.Row="5" Grid.Column="0" Source="configuracoes.png" />
+                    <Label Grid.Row="5" Grid.Column="1" x:Name="lblConfiguracoes" Text="Configurações" Style="{DynamicResource itemMenu}"/>
+
+                    <Image Grid.Row="7" Grid.Column="0" Source="logout.png" />
+                    <Label Grid.Row="7" Grid.Column="1" x:Name="lblLogout" Text="Logout" Style="{DynamicResource itemMenu}"/>
+                </Grid>
+             
+            </StackLayout>
+            
+                
+            
+            
+            <!-- <ListView x:Name="ListView" x:FieldModifier="public">
+            <ListView.ItemsSource> 
+                <x:Array Type="{x:Type Models:ItemMenu}">
+                    <models:ItemMenu Title="Recomendações" IconSource="menu.png" TargetType="{x:Type views:RecomendacoesPage}" />
+                    <models:ItemMenu Title="TodoList" IconSource="menu.png" TargetType="{x:Type views:RecomendacoesPage}" />
+                    <models:ItemMenu Title="Reminders" IconSource="menu.png" TargetType="{x:Type views:RecomendacoesPage}" />
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView> -->
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

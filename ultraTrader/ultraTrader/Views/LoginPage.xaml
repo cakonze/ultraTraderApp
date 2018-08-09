@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False" 
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="ultraTrader.Views.LoginPage">
+    <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <StackLayout Padding="30,30" VerticalOptions="CenterAndExpand">
+
+                <Image Source="ut_logo.png"  Margin="0,30,0,10"  />
+
+                <Label Text="E-mail" Style="{StaticResource prompt}" />
+                <Entry x:Name="txtEmail" Placeholder="Informe seu email de acesso"></Entry>
+                <Label Text="Senha" Style="{StaticResource prompt}"/>
+                <Entry x:Name="txtSenha" Placeholder="********" IsPassword="True" IsTextPredictionEnabled="False"></Entry>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End" >
+                    <Label Text="Salvar minhas credenciais" FontSize="Small" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+                    <Switch x:Name="chkSalvarCredenciais" VerticalOptions="CenterAndExpand"></Switch>
+                </StackLayout>
+                <Button x:Name="btnLogin" Text="Login" Margin="0,0,0,20" Clicked="btnLogin_Clicked" />
+               
+                <Label x:Name="lblEsqueciSenha" Text="Esqueci minha senha" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" />
+                
+                <StackLayout Orientation="Horizontal">
+
+                    <BoxView HeightRequest="1" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Color="Gainsboro"></BoxView>
+                    <Label Text="ou" ></Label>
+                    <BoxView HeightRequest="1" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Color="Gainsboro"></BoxView>
+                </StackLayout>
+
+                <Label x:Name="lblNovaConta" Text="Criar uma conta gratuita" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            </StackLayout>
+
+            <StackLayout IsVisible="{Binding IsBusy}" Style="{StaticResource loadingLayout}" >
+                <ActivityIndicator IsRunning="{Binding IsBusy}" Style="{StaticResource loading}" />
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

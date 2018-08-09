@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ultraTrader.App">
+    <Application.Resources>
+        <ResourceDictionary  >
+
+            <Style x:Key="itemMenu" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+
+            <!-- <Setter Property="Margin" Value="0" /> 
+                            <Setter Property="FontAttributes" Value="None"  />
+            -->
+
+            <Style x:Key="loadingLayout" TargetType="AbsoluteLayout">
+                <Setter Property="Padding" Value="12"></Setter>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="PositionProportional"></Setter>
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="0.5,0.5,-1,-1"></Setter>
+            </Style>
+            
+            <Style x:Key="loading" TargetType="ActivityIndicator">
+                <Setter Property="HeightRequest" Value="80"></Setter>
+                <Setter Property="WidthRequest"  Value="80"></Setter>
+                <Setter Property="Color" Value="Red"></Setter>
+            </Style>
+            
+            <Style x:Key="labelTitle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            <Style x:Key="prompt" TargetType="Label">
+                <Setter Property="TextColor" Value="SlateGray" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Small"/> 
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Gainsboro" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="BorderColor" Value="DarkGray" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderRadius" Value="8" />
+            </Style>
+            <Color x:Key="NavigationPrimary">#000000</Color>
+            <Style TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="Gainsboro" />
+            </Style>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

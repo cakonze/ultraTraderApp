@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "852051559685",
+    "firebase_url": "https://ultratrader-210414.firebaseio.com",
+    "project_id": "ultratrader-210414",
+    "storage_bucket": "ultratrader-210414.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852051559685:android:4f086d1dbb22318d",
+        "android_client_info": {
+          "package_name": "br.com.ultraTrader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852051559685-o7pj4n9etu414loj9pf40o6f0q1e458k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.ultraTrader",
+            "certificate_hash": "551b9582537aa5b5a310733575150a60947eae7c"
+          }
+        },
+        {
+          "client_id": "852051559685-kmlfpdpogsan42k41m1oc74v5nqm8vgu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.ultraTrader",
+            "certificate_hash": "9f3aa18a8cc3185ef99b9b282c63e29be7535deb"
+          }
+        },
+        {
+          "client_id": "852051559685-33oijddnf91f0m5djmtnh0mub1b9gm30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk5_h2yFxno2W01olCXCR7i1YRqMRnANA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852051559685-33oijddnf91f0m5djmtnh0mub1b9gm30.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
